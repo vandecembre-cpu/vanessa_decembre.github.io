@@ -87,6 +87,8 @@
     .case .result { margin: 14px 0 0; padding-top: 14px; border-top: 1px dashed var(--line); font-size: 15px; color: var(--ink); }
     .case .result strong { color: var(--accent); font-weight: 600; }
 
+    .case .links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 14px; font-size: 15px; font-weight: 500; }
+
     /* Experience */
     .role { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--line); }
     .role:last-child { border-bottom: 0; }
@@ -122,6 +124,7 @@
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -202,6 +205,33 @@
           <h3>Running vendor selection for MBTA paratransit routing</h3>
           <p>The MBTA's paratransit service needed a better routing tool, and the transit team needed a selection process they could trust. I defined requirements with the paratransit team, issued an RFI that drew six to eight vendors, shortlisted three to four, ran interviews and hands-on assessments, and built an evaluation model scoring each vendor against requirements, terms, and the status-quo budget.</p>
           <p class="result"><strong>Result:</strong> Vendor selected in 10–12 weeks, with $55M+ in projected five-year savings versus the status quo through more efficient routing and escalators negotiated into the deal.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <p class="sub">Two interactive tools I've built on my own time.</p>
+
+      <div class="cases">
+
+        <article class="case">
+          <p class="meta">Personal project · Interactive web · 2026</p>
+          <h3>Facet: an interactive style workbook</h3>
+          <p>Most style tools hand you a label. Facet starts from the idea that we're multifaceted people, so our style is too. It's an eight-step guide: name three versions of yourself, shop your own closet with four questions, decide what to sell or donate, compare how you spend your week with who your closet is dressed for, then build a short list of additions and a budget split to match.</p>
+          <p>It ends with a one-page style profile, and a companion page, The Edit, talks through each piece before you buy it.</p>
+          <p class="links"><a href="facet/">Open the workbook →</a><a href="facet/guide.html">Jump into the guide →</a></p>
+        </article>
+
+        <article class="case">
+          <p class="meta">Personal project · Interactive map · 2026</p>
+          <h3>Orbit: a map of your people</h3>
+          <p>A contact list tells you who you know. Orbit shows where they are. You set your city, add the people in your life, and each one lands at their real distance and direction from you, on rings measured in miles. Tiers from family to acquaintance color the map, so you can see at a glance who's close by and who's a flight away.</p>
+          <p>You can zoom, pan and nudge people around, and load example data to see how it works. Everything stays in your browser.</p>
+          <p class="links"><a href="orbit-relationship-map.html">Open Orbit →</a></p>
         </article>
 
       </div>
