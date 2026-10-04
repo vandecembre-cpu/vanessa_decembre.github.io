@@ -87,27 +87,11 @@
     .case .result { margin: 14px 0 0; padding-top: 14px; border-top: 1px dashed var(--line); font-size: 15px; color: var(--ink); }
     .case .result strong { color: var(--accent); font-weight: 600; }
 
-    /* Projects */
-    .projects { display: grid; gap: 28px; }
-    .project { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
-    .project .shot { display: block; aspect-ratio: 16 / 10; background: var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
-    .project .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top left; display: block; transition: transform .4s ease; }
-    .project .shot:hover img { transform: scale(1.015); }
-    .project .body { padding: 24px 28px 26px; }
-    .project .meta { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; }
-    .project h3 { font-family: var(--serif); font-weight: 600; font-size: 24px; margin: 0 0 10px; line-height: 1.25; }
-    .project .summary { color: var(--ink-2); font-size: 17px; margin: 0 0 16px; }
-    .project .row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; }
-    .project .tags { margin: 0; }
-    .project .tag { font-size: 13px; padding: 4px 10px; }
-    .project details { margin-top: 18px; border-top: 1px dashed var(--line); padding-top: 14px; }
-    .project summary { cursor: pointer; font-size: 15px; font-weight: 500; color: var(--accent); }
-    .project details[open] summary { margin-bottom: 8px; }
-    .project details h4 { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin: 18px 0 6px; }
-    .project details p, .project details li { color: var(--ink-2); font-size: 16px; }
-    .project details ul { margin: 0 0 12px; padding-left: 20px; }
-    .project details li { margin-bottom: 6px; }
-    @media (prefers-reduced-motion: reduce) { .project .shot img { transition: none; } }
+    .case h4 { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); margin: 22px 0 6px; }
+    .case ul { margin: 0 0 16px; padding-left: 20px; color: var(--ink-2); font-size: 16px; }
+    .case li { margin-bottom: 6px; }
+    .case .built { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--line); }
+    .case .built > span:first-child { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-right: 4px; }
     .case .links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 14px; font-size: 15px; font-weight: 500; }
 
     /* Experience */
@@ -237,66 +221,46 @@
       <h2>Projects</h2>
       <p class="sub">Two interactive tools I've built on my own time.</p>
 
-      <div class="projects">
+      <div class="cases">
 
-        <article class="project">
-          <a class="shot" href="orbit-relationship-map.html" aria-label="Open Orbit"><img src="images/orbit.jpg" alt="Orbit showing a map of people placed around 'You' at their real distance and direction, on rings measured in miles, colored by tier" width="1920" height="1200" loading="lazy"></a>
-          <div class="body">
-            <p class="meta">Personal project · Interactive map · 2026</p>
-            <h3>Orbit: a map of your people</h3>
-            <p class="summary">Everyone in your life on one map, at their real distance and direction from you. I built it while job hunting, to see past the 10 to 15 people in front of me.</p>
-            <div class="row">
-              <div class="tags"><span class="tag">D3.js</span><span class="tag">JavaScript</span></div>
-              <a href="orbit-relationship-map.html">Open Orbit →</a>
-            </div>
-            <details>
-              <summary>Read the full write-up</summary>
-              <p>When we're looking for our next role, we focus on the 10 to 15 people in front of us. But there are usually far more people in our lives than that. A contact list tells you who you know. Orbit shows you everyone at once, and where they are.</p>
-              <p>You set your city and add your people. Each one lands at their real distance and direction from you, on rings measured in miles, colored by tier from family to acquaintance. Zoom, pan, and nudge people around, or load example data to see how it works.</p>
-              <h4>What I was testing</h4>
-              <p>Whether seeing your whole network at once brings back people you'd forgotten.</p>
-              <h4>Product decisions</h4>
-              <ul>
-                <li>Acquaintances get their own tier on purpose. The people outside your inner circle are often the ones who open new doors, and they're the easiest to forget.</li>
-                <li>Real geography, not an abstract diagram, so you can see who's in the city you're targeting.</li>
-                <li>People are grouped by closeness, not by where you met them.</li>
-                <li>Example data loads so nobody starts with an empty map.</li>
-                <li>Private by default: the map lives in your browser, and a shared mode lets others view it while only you edit.</li>
-              </ul>
-              <h4>What I'd test next</h4>
-              <p>Whether the map leads to action, not just awareness. I'd add a "last in touch" date and see if people reach out to someone they've drifted from. Then I'd rebuild the layout for phones, since that's where most people would use it.</p>
-              <h4>Built with</h4>
-              <p>D3.js, JavaScript, and distance-and-direction math.</p>
-            </details>
-          </div>
+        <article class="case project">
+          <p class="meta">Personal project · Interactive map · 2026</p>
+          <h3>Orbit: a map of your people</h3>
+          <p>I built Orbit while job hunting, to widen how I think about my network. When we're looking for our next role, we focus on the 10 to 15 people in front of us. But there are usually far more people in our lives than that. A contact list tells you who you know. Orbit shows you everyone at once, and where they are.</p>
+          <p>You set your city and add your people. Each one lands at their real distance and direction from you, on rings measured in miles, colored by tier from family to acquaintance. Zoom, pan, and nudge people around, or load example data to see how it works.</p>
+          <h4>What I was testing</h4>
+          <p>Whether seeing your whole network at once brings back people you'd forgotten.</p>
+          <h4>Product decisions</h4>
+          <ul>
+            <li>Acquaintances get their own tier on purpose. The people outside your inner circle are often the ones who open new doors, and they're the easiest to forget.</li>
+            <li>Real geography, not an abstract diagram, so you can see who's in the city you're targeting.</li>
+            <li>People are grouped by closeness, not by where you met them.</li>
+            <li>Example data loads so nobody starts with an empty map.</li>
+            <li>Private by default: the map lives in your browser, and a shared mode lets others view it while only you edit.</li>
+          </ul>
+          <h4>What I'd test next</h4>
+          <p>Whether the map leads to action, not just awareness. I'd add a "last in touch" date and see if people reach out to someone they've drifted from. Then I'd rebuild the layout for phones, since that's where most people would use it.</p>
+          <div class="built"><span>Built with</span><span class="tag">D3.js</span><span class="tag">JavaScript</span><span class="tag">Distance-and-direction math</span></div>
+          <p class="links"><a href="orbit-relationship-map.html">Open Orbit →</a></p>
         </article>
 
-        <article class="project">
-          <a class="shot" href="facet/" aria-label="Open Facet"><img src="images/facet.jpg" alt="Facet's guide, step 5: bars comparing each version of you's share of the week with their share of the closet" width="1920" height="1200" loading="lazy"></a>
-          <div class="body">
-            <p class="meta">Personal project · Interactive workbook · 2026</p>
-            <h3>Facet: an interactive style workbook</h3>
-            <p class="summary">An eight-step workbook built on one idea: you're several people, and your closet should dress the ones you actually live as.</p>
-            <div class="row">
-              <div class="tags"><span class="tag">HTML</span><span class="tag">JavaScript</span></div>
-              <a href="facet/">Open the workbook →</a>
-            </div>
-            <details>
-              <summary>Read the full write-up</summary>
-              <p>Most style tools hand you a label. I don't think people are one style, so Facet starts from the opposite idea.</p>
-              <p>You name three versions of yourself and split your week between them. From there, you audit your closet with four questions, decide what to sell or donate, see which version of you you've actually been shopping for, and build a short list and a budget to match. A companion page, The Edit, talks through each piece before you buy it.</p>
-              <h4>What I was testing</h4>
-              <p>Whether structure can slow down a decision people usually make on impulse.</p>
-              <h4>Product decisions</h4>
-              <ul>
-                <li>One rule: your real week drives everything. The split you set in step two shapes the closet chart, the shopping list, and the budget, so the advice is for your real life, not the fun-to-picture one.</li>
-                <li>AI is a layer, not a dependency. The Edit works as a guided conversation on its own, and the AI stylist adds to it when it's available.</li>
-                <li>Your data stays in your browser. I chose a save-and-restore file over accounts because asking people to sign up for a style quiz is asking a lot.</li>
-              </ul>
-              <h4>What I'd test next</h4>
-              <p>Where people drop off. My guess is the closet audit, the longest step, so I'd try a shorter version. I'd also define "working" before measuring it: not finishing the workbook, but buying fewer things and wearing more of what you buy. That means checking back after 30 days.</p>
-            </details>
-          </div>
+        <article class="case project">
+          <p class="meta">Personal project · Interactive workbook · 2026</p>
+          <h3>Facet: an interactive style workbook</h3>
+          <p>Most style tools hand you a label. I don't think people are one style, so Facet starts from the opposite idea: you're several people, and your closet should dress the ones you actually live as.</p>
+          <p>It's an eight-step workbook. You name three versions of yourself and split your week between them. From there, you audit your closet with four questions, decide what to sell or donate, see which version of you you've actually been shopping for, and build a short list and a budget to match. A companion page, The Edit, talks through each piece before you buy it.</p>
+          <h4>What I was testing</h4>
+          <p>Whether structure can slow down a decision people usually make on impulse.</p>
+          <h4>Product decisions</h4>
+          <ul>
+            <li>One rule: your real week drives everything. The split you set in step two shapes the closet chart, the shopping list, and the budget, so the advice is for your real life, not the fun-to-picture one.</li>
+            <li>AI is a layer, not a dependency. The Edit works as a guided conversation on its own, and the AI stylist adds to it when it's available.</li>
+            <li>Your data stays in your browser. I chose a save-and-restore file over accounts because asking people to sign up for a style quiz is asking a lot.</li>
+          </ul>
+          <h4>What I'd test next</h4>
+          <p>Where people drop off. My guess is the closet audit, the longest step, so I'd try a shorter version. I'd also define "working" before measuring it: not finishing the workbook, but buying fewer things and wearing more of what you buy. That means checking back after 30 days.</p>
+          <div class="built"><span>Built with</span><span class="tag">HTML</span><span class="tag">JavaScript</span></div>
+          <p class="links"><a href="facet/">Open the workbook →</a><a href="facet/guide.html">Jump into the guide →</a></p>
         </article>
 
       </div>
